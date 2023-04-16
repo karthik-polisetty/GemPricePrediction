@@ -53,6 +53,6 @@ def evaluate_model(X_train,X_test,y_train,y_test,models):
 def load_object(filepath):
     try:
         with open(filepath,'rb') as f:
-            return dill.load(f)
+            return pickle.load(f)
     except Exception as e:
         raise CustomException(e,sys)
